@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.brown.shade200,
       appBar: AppBar(
-        title: Text('Currency Converter',style: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold,letterSpacing: 2),).animate().move(begin: Offset(-400, 0),delay: 300.ms,duration: 600.ms),
+        title: Text('Currency Converter',style: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold,letterSpacing: 2),).animate().move(begin: Offset(-400, 0),duration: 600.ms),
         centerTitle: true,
         elevation: 2,
       ),
@@ -68,13 +68,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
                         UsdToAny(
                             rates: snapshot.data?.rates,
-                            currencies: currSnapshot.data).animate().move(delay: 500.ms,duration: 600.ms,begin: Offset(-400, 0)),
+                            currencies: currSnapshot.data).animate().move(duration: 600.ms,begin: Offset(-400, 0)),
 
                         SizedBox(height: 20,),
 
                         AnyToAny(
                             rates: snapshot.data?.rates,
-                            curruncies: currSnapshot.data!).animate().move(delay: 700.ms,duration: 600.ms,begin: Offset(-400, 0)),
+                            curruncies: currSnapshot.data!).animate().move(duration: 600.ms,begin: Offset(-400, 0)),
 
                         SizedBox(height: 20,),
 
